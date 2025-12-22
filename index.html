@@ -211,78 +211,37 @@ footer{
   .hero h1{font-size:2rem}
 }
 
-/* ================= MÓVIL: HERO + BOTONES EN UNA PANTALLA ================= */
-@media (max-width: 600px){
+@media(max-width:768px){
 
-  html, body{
-    overflow-x:hidden;
-  }
-
-  /* Header a pantalla completa */
   header{
     height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+    justify-content:flex-end;
+  }
+
+  .hero{
+    position:relative;
+    bottom:auto;
+    left:auto;
     padding:20px;
   }
 
-  /* Hero centrado */
-  .hero{
-    position:relative;
-    left:auto;
-    bottom:auto;
-    max-width:100%;
-    margin:40px 0 20px;
-  }
-
-  .hero h1{
-    font-size:1.8rem;
-    line-height:1.25;
-  }
-
-  .hero p{
-    font-size:.95rem;
-    margin-bottom:16px;
-  }
-
-  .hero button{
-    width:100%;
-    padding:15px;
-    font-size:1rem;
-  }
-
-  /* Botones dentro del header */
-  header::after{
-    background:rgba(0,0,0,.6);
-  }
-
-  .quick-actions{
-    position:absolute;
-    bottom:24px;
-    left:50%;
-    transform:translateX(-50%);
-    width:calc(100% - 40px);
+  .inside-header{
+    display:grid;
     grid-template-columns:1fr;
     gap:12px;
+    padding:20px;
     z-index:2;
   }
 
-  /* Ocultamos la sección duplicada */
-  section.quick-actions{
-    display:none;
+  .inside-header button{
+    background:#1b1b1b;
+    font-size:1rem;
+    padding:16px;
+    border-radius:10px;
   }
 
-  /* Ajustes generales móvil */
-  section{
-    padding:55px 18px;
-  }
-
-  iframe{
-    height:300px;
-  }
 }
 
 </style>
@@ -300,11 +259,12 @@ footer{
   </div>
 </header>
 
-<section class="quick-actions">
-  <button onclick="scrollToId('carta')">Ver Carta</button>
-  <button onclick="whatsapp()">WhatsApp</button>
-  <button onclick="scrollToId('ubicacion')">Cómo llegar</button>
-</section>
+  <section class="quick-actions inside-header">
+    <button onclick="scrollToId('carta')">Ver Carta</button>
+    <button onclick="whatsapp()">WhatsApp</button>
+    <button onclick="scrollToId('ubicacion')">Cómo llegar</button>
+  </section>
+</header>
 
 <section id="carta">
   <h2>Nuestra Carta</h2>
@@ -372,6 +332,7 @@ function scrollToId(id){
 
 </body>
 </html>
+
 
 
 
