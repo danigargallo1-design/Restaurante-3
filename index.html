@@ -214,8 +214,16 @@ footer{
 @media(max-width:768px){
 
   header{
-    height:70vh;              /* antes 100vh o 65vh */
+    height:50vh;              /* antes 100vh o 65vh */
     min-height:420px;         /* evita que se haga demasiado pequeño */
+  }
+
+}
+@media(max-width:768px){
+
+  header{
+    height:calc(100vh - 210px); /* espacio reservado para los botones */
+    min-height:380px;
   }
 
 }
@@ -307,5 +315,6 @@ function scrollToId(id){
 
 </body>
 </html>
+
 
 
