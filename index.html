@@ -9,22 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
   font-family:'Montserrat',sans-serif;
-  background:#ecebe7;
+  background:#ecebe7;              /* gris cálido profesional */
   color:#1f1f1f;
   line-height:1.6;
 }
 
-/* ================= HEADER (DESKTOP) ================= */
+/* HEADER */
 header{
-  height:65vh;
+  height:65vh;                     /* más contenido */
   background:url('https://cdn.prod.website-files.com/61b21d4c816d9bbab3caefa7/6384f69227d8bbf604fd2fae_tipos-de-bar.jpg') center/cover no-repeat;
   position:relative;
 }
@@ -33,7 +29,7 @@ header::after{
   content:'';
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.55);
+  background:rgba(0,0,0,.55);      /* más sobrio */
 }
 
 .nav{
@@ -42,7 +38,7 @@ header::after{
   left:22px;
   z-index:2;
   color:#fff;
-  font-weight:600;
+  font-weight:600;                 /* menos agresivo */
   font-size:1.4rem;
   letter-spacing:.4px;
 }
@@ -71,17 +67,17 @@ header::after{
 .hero button{
   padding:12px 26px;
   border:none;
-  border-radius:4px;
+  border-radius:4px;               /* más serio */
   font-weight:600;
   font-size:.95rem;
   cursor:pointer;
-  background:#1f7a4d;
+  background:#1f7a4d;              /* verde apagado */
   color:#fff;
 }
 
-/* ================= SECCIONES ================= */
+/* SECCIONES */
 section{
-  padding:70px 20px;
+  padding:70px 20px;               /* más aire = más calidad */
 }
 
 h2{
@@ -91,7 +87,7 @@ h2{
   font-weight:600;
 }
 
-/* ================= ACCIONES RÁPIDAS ================= */
+/* ACCIONES RAPIDAS */
 .quick-actions{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -111,7 +107,7 @@ h2{
   font-size:.95rem;
 }
 
-/* ================= CARTA ================= */
+/* CARTA */
 .menu-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -122,13 +118,13 @@ h2{
 
 .menu-grid button{
   position:relative;
-  height:210px;
+  height:210px;                    /* un poco más elegante */
   border:none;
   border-radius:14px;
   overflow:hidden;
   cursor:pointer;
   padding:0;
-  box-shadow:0 10px 22px rgba(0,0,0,.08);
+  box-shadow:0 10px 22px rgba(0,0,0,.08); /* sombra profesional */
 }
 
 .menu-grid button img{
@@ -141,7 +137,7 @@ h2{
 }
 
 .menu-grid button:hover img{
-  transform:scale(1.04);
+  transform:scale(1.04);           /* hover sutil */
 }
 
 .menu-grid button span{
@@ -150,16 +146,21 @@ h2{
   display:flex;
   align-items:center;
   justify-content:center;
+
   font-family:'Playfair Display', serif;
   font-size:1.65rem;
   font-weight:600;
   letter-spacing:.4px;
+  text-transform:capitalize;
+
   color:#fff;
+  text-align:center;
+
   background:rgba(0,0,0,.5);
   text-shadow:0 3px 12px rgba(0,0,0,.6);
 }
 
-/* ================= MAPA ================= */
+/* MAPA */
 iframe{
   width:100%;
   height:380px;
@@ -168,7 +169,7 @@ iframe{
   box-shadow:0 10px 22px rgba(0,0,0,.08);
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer{
   background:#1a1a1a;
   color:#cfcfcf;
@@ -177,7 +178,7 @@ footer{
   font-size:.85rem;
 }
 
-/* ================= MODAL ================= */
+/* MODAL */
 #modal{
   display:none;
   position:fixed;
@@ -203,15 +204,145 @@ footer{
   cursor:pointer;
 }
 
-/* ================= TABLET ================= */
-@media (max-width:768px){
+/* RESPONSIVE */
+@media(max-width:768px){
   .quick-actions{grid-template-columns:1fr}
   .menu-grid{grid-template-columns:1fr}
   .hero h1{font-size:2rem}
 }
 
-/* ================= MÓVIL ================= */
-@media (max-width:600px){
+  /* HEADER */
+  header{
+    height:85vh;
+  }
+
+  .nav{
+    font-size:1.1rem;
+    top:18px;
+    left:18px;
+  }
+
+  .hero{
+    left:50%;
+    bottom:90px;
+    transform:translateX(-50%);
+    text-align:center;
+    padding:0 18px;
+  }
+
+  .hero h1{
+    font-size:1.75rem;
+    line-height:1.25;
+  }
+
+  .hero p{
+    font-size:.95rem;
+  }
+
+  .hero button{
+    width:100%;
+    padding:15px;
+    font-size:1rem;
+  }
+
+  /* SECCIONES */
+  section{
+    padding:55px 18px;
+  }
+
+  h2{
+    font-size:1.4rem;
+    margin-bottom:30px;
+  }
+
+  /* ACCIONES RÁPIDAS */
+  .quick-actions{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .quick-actions button{
+    font-size:1rem;
+    padding:20px;
+    border-radius:10px;
+  }
+
+  /* CARTA */
+  .menu-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .menu-grid button{
+    height:180px;
+    border-radius:16px;
+  }
+
+  .menu-grid button span{
+    font-size:1.4rem;
+  }
+
+  /* MAPA */
+  iframe{
+    height:300px;
+    border-radius:16px;
+  }
+
+  /* FOOTER */
+  footer{
+    font-size:.8rem;
+  }
+
+/* 2 */
+@media (max-width: 600px){
+
+  header{
+    height:92vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding-bottom:24px;
+  }
+
+  .hero{
+    position:relative;
+    bottom:auto;
+    left:auto;
+    transform:none;
+    padding:0 18px;
+    text-align:left;
+  }
+
+  .hero h1{
+    font-size:1.7rem;
+    line-height:1.25;
+  }
+
+  .hero p{
+    font-size:.95rem;
+    margin-bottom:16px;
+  }
+
+  .hero button{
+    width:100%;
+    padding:14px;
+    font-size:1rem;
+  }
+
+  /* ACCIONES DENTRO DEL HEADER */
+  .quick-actions{
+    margin-top:18px;
+    padding:0 18px;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  section.quick-actions{
+    padding:0;
+  }
+}
+
+@media (max-width: 600px){
 
   header{
     height:92vh;
@@ -292,8 +423,8 @@ footer{
     font-size:.8rem;
   }
 }
-</style>
 
+</style>
 </head>
 
 <body>
@@ -380,4 +511,3 @@ function scrollToId(id){
 
 </body>
 </html>
-
