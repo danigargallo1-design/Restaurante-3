@@ -204,15 +204,17 @@ footer{
   cursor:pointer;
 }
 
+/* RESPONSIVE */
+@media(max-width:768px){
+  .quick-actions{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2rem}
+}
 @media (max-width: 600px){
 
   /* HEADER */
   header{
-    height:92vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding-bottom:24px;
+    height:85vh;
   }
 
   .nav{
@@ -222,37 +224,26 @@ footer{
   }
 
   .hero{
-    position:relative;
+    left:50%;
+    bottom:90px;
+    transform:translateX(-50%);
+    text-align:center;
     padding:0 18px;
-    text-align:left;
   }
 
   .hero h1{
-    font-size:1.7rem;
+    font-size:1.75rem;
     line-height:1.25;
   }
 
   .hero p{
     font-size:.95rem;
-    margin-bottom:14px;
   }
 
   .hero button{
     width:100%;
-    padding:14px;
+    padding:15px;
     font-size:1rem;
-  }
-
-  /* ACCIONES RÁPIDAS DENTRO DEL HEADER */
-  .quick-actions{
-    padding:18px;
-    margin-top:14px;
-    grid-template-columns:1fr;
-    gap:12px;
-  }
-
-  section.quick-actions{
-    padding:0;
   }
 
   /* SECCIONES */
@@ -263,6 +254,18 @@ footer{
   h2{
     font-size:1.4rem;
     margin-bottom:30px;
+  }
+
+  /* ACCIONES RÁPIDAS */
+  .quick-actions{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .quick-actions button{
+    font-size:1rem;
+    padding:20px;
+    border-radius:10px;
   }
 
   /* CARTA */
@@ -289,6 +292,54 @@ footer{
   /* FOOTER */
   footer{
     font-size:.8rem;
+  }
+}
+/* 2 */
+@media (max-width: 600px){
+
+  header{
+    height:92vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding-bottom:24px;
+  }
+
+  .hero{
+    position:relative;
+    bottom:auto;
+    left:auto;
+    transform:none;
+    padding:0 18px;
+    text-align:left;
+  }
+
+  .hero h1{
+    font-size:1.7rem;
+    line-height:1.25;
+  }
+
+  .hero p{
+    font-size:.95rem;
+    margin-bottom:16px;
+  }
+
+  .hero button{
+    width:100%;
+    padding:14px;
+    font-size:1rem;
+  }
+
+  /* ACCIONES DENTRO DEL HEADER */
+  .quick-actions{
+    margin-top:18px;
+    padding:0 18px;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  section.quick-actions{
+    padding:0;
   }
 }
 
@@ -379,5 +430,3 @@ function scrollToId(id){
 
 </body>
 </html>
-
-
