@@ -211,6 +211,80 @@ footer{
   .hero h1{font-size:2rem}
 }
 
+/* ================= MÓVIL: HERO + BOTONES EN UNA PANTALLA ================= */
+@media (max-width: 600px){
+
+  html, body{
+    overflow-x:hidden;
+  }
+
+  /* Header a pantalla completa */
+  header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+  }
+
+  /* Hero centrado */
+  .hero{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    max-width:100%;
+    margin:40px 0 20px;
+  }
+
+  .hero h1{
+    font-size:1.8rem;
+    line-height:1.25;
+  }
+
+  .hero p{
+    font-size:.95rem;
+    margin-bottom:16px;
+  }
+
+  .hero button{
+    width:100%;
+    padding:15px;
+    font-size:1rem;
+  }
+
+  /* Botones dentro del header */
+  header::after{
+    background:rgba(0,0,0,.6);
+  }
+
+  .quick-actions{
+    position:absolute;
+    bottom:24px;
+    left:50%;
+    transform:translateX(-50%);
+    width:calc(100% - 40px);
+    grid-template-columns:1fr;
+    gap:12px;
+    z-index:2;
+  }
+
+  /* Ocultamos la sección duplicada */
+  section.quick-actions{
+    display:none;
+  }
+
+  /* Ajustes generales móvil */
+  section{
+    padding:55px 18px;
+  }
+
+  iframe{
+    height:300px;
+  }
+}
+
 </style>
 </head>
 
@@ -298,5 +372,7 @@ function scrollToId(id){
 
 </body>
 </html>
+
+
 
 
