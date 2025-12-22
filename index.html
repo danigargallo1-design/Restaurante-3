@@ -210,6 +210,90 @@ footer{
   .menu-grid{grid-template-columns:1fr}
   .hero h1{font-size:2rem}
 }
+@media (max-width: 600px){
+
+  /* HEADER */
+  header{
+    height:85vh;
+  }
+
+  .nav{
+    font-size:1.1rem;
+    top:18px;
+    left:18px;
+  }
+
+  .hero{
+    left:50%;
+    bottom:90px;
+    transform:translateX(-50%);
+    text-align:center;
+    padding:0 18px;
+  }
+
+  .hero h1{
+    font-size:1.75rem;
+    line-height:1.25;
+  }
+
+  .hero p{
+    font-size:.95rem;
+  }
+
+  .hero button{
+    width:100%;
+    padding:15px;
+    font-size:1rem;
+  }
+
+  /* SECCIONES */
+  section{
+    padding:55px 18px;
+  }
+
+  h2{
+    font-size:1.4rem;
+    margin-bottom:30px;
+  }
+
+  /* ACCIONES RÁPIDAS */
+  .quick-actions{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .quick-actions button{
+    font-size:1rem;
+    padding:20px;
+    border-radius:10px;
+  }
+
+  /* CARTA */
+  .menu-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .menu-grid button{
+    height:180px;
+    border-radius:16px;
+  }
+
+  .menu-grid button span{
+    font-size:1.4rem;
+  }
+
+  /* MAPA */
+  iframe{
+    height:300px;
+    border-radius:16px;
+  }
+
+  /* FOOTER */
+  footer{
+    font-size:.8rem;
+  }
+}
 
 </style>
 </head>
