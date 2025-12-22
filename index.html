@@ -20,7 +20,7 @@ body{
 
 /* HEADER */
 header{
-  height:40vh;                     /* más contenido */
+  height:20vh;                     /* más contenido */
   background:url('https://cdn.prod.website-files.com/61b21d4c816d9bbab3caefa7/6384f69227d8bbf604fd2fae_tipos-de-bar.jpg') center/cover no-repeat;
   position:relative;
 }
@@ -204,29 +204,7 @@ footer{
   cursor:pointer;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .quick-actions{grid-template-columns:1fr}
-  .menu-grid{grid-template-columns:1fr}
-  .hero h1{font-size:2rem}
-}
 
-@media(max-width:768px){
-
-  header{
-    height:50vh;              /* antes 100vh o 65vh */
-    min-height:420px;         /* evita que se haga demasiado pequeño */
-  }
-
-}
-@media(max-width:768px){
-
-  header{
-    height:calc(100vh - 210px); /* espacio reservado para los botones */
-    min-height:380px;
-  }
-
-}
 
 </style>
 </head>
@@ -315,3 +293,4 @@ function scrollToId(id){
 
 </body>
 </html>
+
